@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Timeline from './components/Timeline';
 import Artifacts from './components/Artifacts';
@@ -30,7 +29,6 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-stone-900 text-stone-100 selection:bg-amber-500 selection:text-stone-900 font-sans overflow-x-hidden flex flex-col">
-      <Navbar currentView={currentView} onNavigate={setCurrentView} />
       <main className="flex-grow">
         <div key={currentView} className="animate-page-enter min-h-screen w-full">
           {renderView()}
